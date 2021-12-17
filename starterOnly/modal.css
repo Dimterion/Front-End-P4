@@ -195,6 +195,24 @@ label {
   display: inline-block;
   margin-bottom: 11px;
 }
+
+/*
+
+legend font-size, font-weight and padding-top added,
+fieldset borded removed
+
+*/
+
+legend {
+  font-size: 17px;
+  font-weight: normal;
+  padding-top: 5px;
+}
+
+fieldset {
+  border: none;
+}
+
 input {
   padding: 8px;
   border: 0.8px solid #ccc;
@@ -226,7 +244,7 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+/*
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
@@ -462,6 +480,7 @@ input[data-error]::after {
   height: 100%;
   display: block;
   padding: 0;
+  object-fit: cover;
 }
 .copyrights {
   color: #fe142f;
