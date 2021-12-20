@@ -14,12 +14,10 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+          <img alt="logo" src="Logo.png"/>
     </div>
     <div class="main-navbar">
-      
-      <a href="#" class="active"><span>Home</span></a>
-      <a href="#"><span>Event Details</span></a>
+      <a href="#" class="active"><span>Event Details</span></a>
       <a href="#"><span>About Us</span></a>
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Past Events</span></a>
@@ -60,7 +58,7 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              onsubmit="return validate()"
             >
               <div
                 class="formData">
@@ -121,7 +119,7 @@
                 oninput="this.setCustomValidity('')">
               </div>
               <div class="formData">
-                <fieldset>
+                <fieldset name="fieldsetName">
                   <legend>Where do you want to participate this year?</legend>
                   <input
                     class="checkbox-input"
@@ -129,7 +127,7 @@
                     id="location1"
                     name="location"
                     value="New York"
-                    required
+                    
                   />
                   <label class="checkbox-label" for="location1">
                     <span class="checkbox-icon"></span>
@@ -190,6 +188,7 @@
                     <span class="checkbox-icon"></span>
                     Portland</label
                   >
+                  <span id="error_city" class="error"></span>
                 </fieldset>
               </div>
 
@@ -199,14 +198,19 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  required
+                  name = "terms-check"
                 />
                 <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   I have read and I agree to GameOn's terms and conditions.
                 </label>
+                <span id="error_terms" class="error"></span>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2"/>
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  id="checkbox2"
+                />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Please sign me up to be notified about future events.
