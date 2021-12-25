@@ -147,7 +147,9 @@ formField.addEventListener("submit", (e) => {
   e.preventDefault();
   validate();
   if (criteriaCheck == true) {
+
     // formField.classList.add("select-hide");
+    
     document.querySelector(".bground").style.display = "none";
     document.querySelector("#bground1").style.display = "block";
   }
