@@ -14,10 +14,11 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-          <img alt="logo" src="Logo.png"/>
+      <img alt="logo" src="Logo.png" width="auto" height="auto" />
     </div>
     <div class="main-navbar">
-      <a href="#" class="active"><span>Event Details</span></a>
+      <a href="#" class="active"><span>Home</span></a>
+      <a href="#"><span>Event Details</span></a>
       <a href="#"><span>About Us</span></a>
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Past Events</span></a>
@@ -49,7 +50,6 @@
           sign up now
         </button>
       </div>
-
       <div class="bground">
         <div class="content">
           <span class="close"></span>
@@ -58,10 +58,10 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate()"
-            >
+              onsubmit="return validate();"
+              >
               <div
-                class="formData">
+                class="formData" data-error="Please enter 2+ characters for the first name field.">
                 <label for="first">First Name</label><br>
                 <input
                   class="text-control"
@@ -69,148 +69,130 @@
                   id="first"
                   name="first"
                   minlength="2"
-                  required
-                  oninvalid="this.setCustomValidity('Please enter 2+ characters for name field.')"
-                  oninput="this.setCustomValidity('')"
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData" data-error="Please enter 2+ characters for the last name field.">
                 <label for="last">Last Name</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
-                  minlength="2"
-                  required
-                  oninvalid="this.setCustomValidity('Please enter 2+ characters for name field.')"
-                  oninput="this.setCustomValidity('')"
                 /><br>
               </div>
               <div
-                class="formData">
-                <label>Email</label><br>
+                class="formData" data-error="Please enter email in the correct format, e.g. example@example.com.">
+                <label for="email">Email</label><br>
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
-                  required
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData" data-error="You must enter your date of birth.">
                 <label for="birthdate">Birthdate</label><br>
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                  required
-                  oninvalid="this.setCustomValidity('You must enter your date of birth.')"
-                  oninput="this.setCustomValidity('')"
                 /><br>
               </div>
               <div
-                class="formData">
-                <label for="quantity">How many tournaments have you attended?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required oninvalid="this.setCustomValidity('You must enter the number of tournaments you attended.')"
-                oninput="this.setCustomValidity('')">
+                class="formData" data-error="Please enter the number of tournaments you attended. It can't be a negative number.">
+                <label for="quantity">How many tournaments have you attended? </label><br>
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
-              <div class="formData">
-                <fieldset name="fieldsetName">
-                  <legend>Where do you want to participate this year?</legend>
-                  <input
-                    class="checkbox-input"
-                    type="radio"
-                    id="location1"
-                    name="location"
-                    value="New York"
-                    
-                  />
-                  <label class="checkbox-label" for="location1">
-                    <span class="checkbox-icon"></span>
-                    New York</label
-                  >
-                  <input
-                    class="checkbox-input"
-                    type="radio"
-                    id="location2"
-                    name="location"
-                    value="San Francisco"
-                  />
-                  <label class="checkbox-label" for="location2">
-                    <span class="checkbox-icon"></span>
-                    San Francisco</label
-                  >
-                  <input
-                    class="checkbox-input"
-                    type="radio"
-                    id="location3"
-                    name="location"
-                    value="Seattle"
-                  />
-                  <label class="checkbox-label" for="location3">
-                    <span class="checkbox-icon"></span>
-                    Seattle</label
-                  >
-                  <input
-                    class="checkbox-input"
-                    type="radio"
-                    id="location4"
-                    name="location"
-                    value="Chicago"
-                  />
-                  <label class="checkbox-label" for="location4">
-                    <span class="checkbox-icon"></span>
-                    Chicago</label
-                  >
-                  <input
-                    class="checkbox-input"
-                    type="radio"
-                    id="location5"
-                    name="location"
-                    value="Boston"
-                  />
-                  <label class="checkbox-label" for="location5">
-                    <span class="checkbox-icon"></span>
-                    Boston</label
-                  >
-                  <input
-                    class="checkbox-input"
-                    type="radio"
-                    id="location6"
-                    name="location"
-                    value="Portland"
-                  />
-                  <label class="checkbox-label" for="location6">
-                    <span class="checkbox-icon"></span>
-                    Portland</label
-                  >
-                  <span id="error_city" class="error"></span>
-                </fieldset>
-              </div>
-
+              <p class="text-label">Where do you want to participate this year?</p>
               <div
-                class="formData">
+                class="formData" data-error="You must choose one option.">
+                <input
+                  class="checkbox-input"
+                  type="radio"
+                  id="location1"
+                  name="location"
+                  value="New York"
+                />
+                <label class="checkbox-label" for="location1">
+                  <span class="checkbox-icon"></span>
+                  New York</label
+                >
+                <input
+                  class="checkbox-input"
+                  type="radio"
+                  id="location2"
+                  name="location"
+                  value="San Francisco"
+                />
+                <label class="checkbox-label" for="location2">
+                  <span class="checkbox-icon"></span>
+                  San Francisco</label
+                >
+                <input
+                  class="checkbox-input"
+                  type="radio"
+                  id="location3"
+                  name="location"
+                  value="Seattle"
+                />
+                <label class="checkbox-label" for="location3">
+                  <span class="checkbox-icon"></span>
+                  Seattle</label
+                >
+                <input
+                  class="checkbox-input"
+                  type="radio"
+                  id="location4"
+                  name="location"
+                  value="Chicago"
+                />
+                <label class="checkbox-label" for="location4">
+                  <span class="checkbox-icon"></span>
+                  Chicago</label
+                >
+                <input
+                  class="checkbox-input"
+                  type="radio"
+                  id="location5"
+                  name="location"
+                  value="Boston"
+                />
+                <label class="checkbox-label" for="location5">
+                  <span class="checkbox-icon"></span>
+                  Boston</label
+                >
+                <input
+                  class="checkbox-input"
+                  type="radio"
+                  id="location6"
+                  name="location"
+                  value="Portland"
+                />
+                <label class="checkbox-label" for="location6">
+                  <span class="checkbox-icon"></span>
+                  Portland</label
+                >
+              </div>
+              <div
+                class="formData" data-error="You must check to agree to terms and conditions.">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  name = "terms-check"
+                  checked
                 />
-                <label class="checkbox2-label" for="checkbox1">
+                <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   I have read and I agree to GameOn's terms and conditions.
                 </label>
-                <span id="error_terms" class="error"></span>
                 <br>
-                <input
-                  class="checkbox-input"
-                  type="checkbox"
-                  id="checkbox2"
-                />
+              </div>
+              <div
+                class="formData">
+                <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Please sign me up to be notified about future events.
@@ -227,6 +209,20 @@
           </div>
         </div>
       </div>
+
+      <!--ADDED-->
+
+      <div id="bground1">
+        <div id="content1">
+          <span class="close"></span>
+          <div id="modal-body1">
+          <div>Thanks.</div>
+          </div>
+        </div>
+      </div>
+
+      <!--ADDED-END-->
+
     </main>
     <footer>
       <p class="copyrights">
