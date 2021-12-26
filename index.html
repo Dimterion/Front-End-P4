@@ -87,7 +87,7 @@
                 /><br>
               </div>
               <div
-                class="formData" data-error="Please enter email in the correct format, e.g. example@example.com.">
+                class="formData" data-error="Enter email in the correct format (email@email.com)">
                 <label for="email">Email</label><br>
                 <input
                   class="text-control"
@@ -107,7 +107,7 @@
                 /><br>
               </div>
               <div
-                class="formData" data-error="Please enter the number of tournaments you attended. It can't be a negative number.">
+                class="formData" data-error="Enter the number of tournaments you attended.">
                 <label for="quantity">How many tournaments have you attended? </label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
@@ -215,19 +215,22 @@
         </div>
       </div>
 
-      <!--ADDED-->
+      <!--Confirmation section -->
 
-      <div id="bground1">
-        <div id="content1">
-          <span class="close"></span>
-          <div id="modal-body1">
-          <div>Thanks.</div>
+      <div id="bground-submitted">
+        <div id="content-submitted">
+          <span id="close-submitted" class="close"></span>
+          <div id="modal-body-submitted">
+            <p>Thank you for submitting your registration details.</p>
+            <input
+              id="button-submitted"
+              type="button"
+              class="btn-submit"
+              value="Close"
+            />
           </div>
         </div>
       </div>
-
-      <!--ADDED-END-->
-
     </main>
     <footer>
       <p class="copyrights">

@@ -13,6 +13,9 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".close");
+const formField = document.querySelector("form");
+const finalFormClose = document.querySelector("#close-submitted");
+const finalFormCloseBtn = document.querySelector("#button-submitted");
 
 // launch modal event
 
@@ -112,19 +115,12 @@ function validateTerms() {
   }
 }
 
-/*
-validateFirstName() & validateLastName() & validateEmail() & validateBirthDate() & validateTournaments() & validateCity() & validateTerms()
+// final validation function and event listener for submit
 
-validateFirstName(), validateLastName(), validateEmail(), validateBirthDate(), validateTournaments(), validateCity(), validateTerms()
-*/
-
-// const bgroundThx = document.querySelector("#bground1");
-
-const formField = document.querySelector("form");
 let criteriaCheck = false;
 
 function validate() {
-  if (validateFirstName(), validateLastName(), validateEmail(), validateBirthDate(), validateTournaments(), validateCity(), validateTerms()) {
+  if (validateFirstName() & validateLastName() & validateEmail() & validateBirthDate() & validateTournaments() & validateCity() & validateTerms()) {
     criteriaCheck = true;
     return true;
     } else {
@@ -132,25 +128,21 @@ function validate() {
   }
 }
 
-/*formField.addEventListener("submit", (e) => {
-  e.preventDefault();
-  validate();
-  if (criteriaCheck == true) {
-    bgroundThx.style.display = "block";
-    return true;
-  } else {
-    return false;
-  }
-});*/
-
 formField.addEventListener("submit", (e) => {
   e.preventDefault();
   validate();
   if (criteriaCheck == true) {
-
-    // formField.classList.add("select-hide");
-    
     document.querySelector(".bground").style.display = "none";
-    document.querySelector("#bground1").style.display = "block";
+    document.querySelector("#bground-submitted").style.display = "block";
   }
 });
+
+// close buttons functionality for the confirmation form
+
+function closeFinalForm() {
+  document.querySelector("#bground-submitted").style.display = "none";
+  document.reserve.submit();
+}
+
+finalFormClose.addEventListener("click", closeFinalForm);
+finalFormCloseBtn.addEventListener("click", closeFinalForm);
