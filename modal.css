@@ -271,11 +271,13 @@ input[data-error]::after {
   font-weight: normal;
 }
 
+/*Changed: width: 20px; height: 20px*/
+
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   border: 2px solid #279e7a;
   border-radius: 50%;
   text-indent: 29px;
@@ -468,7 +470,7 @@ input[data-error]::after {
   margin-bottom: 10px;
 }
 
-/*Removed: min-width: 424px;*/
+/*Removed: min-width: 424px; Added: width: 100%;*/
 
 .hero-content {
   padding: 51px 67px;
@@ -477,6 +479,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
+  width: 100%
 }
 
 .hero-content::after {
