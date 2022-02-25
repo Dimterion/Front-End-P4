@@ -10,7 +10,7 @@ OpenClassrooms project
 
 HTML, CSS, JavaScript
 
-# Task
+## Task
 
 - Work on the already started project and finish it
 - Use provided mockups, specifications and design: [Landing page](https://github.com/Dimterion/Gaming-events-company-registration-landing-page/blob/master/GameOn%20website%20design%20example%20-%20landing%20page.jpg), [Registration form](https://github.com/Dimterion/Gaming-events-company-registration-landing-page/blob/master/GameOn%20website%20design%20example%20-%20registration%20form.jpg)
